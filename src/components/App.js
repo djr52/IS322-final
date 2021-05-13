@@ -5,6 +5,7 @@ import {BrowserRouter, Route} from 'react-router-dom';
 import Navbar from "./Navbar";
 
 import AccountList from "./AccountList"
+import TransactionList from "./TransactionList";
 
 import '../styles/App.css';
 import axios from 'axios';
@@ -16,6 +17,7 @@ class App extends React.Component {
 
   componentDidMount() {
     this.getAccountData();
+    this.getTransactionData()
   }
 
   getAccountData() {
@@ -41,6 +43,8 @@ class App extends React.Component {
                 <Navbar/>
                 <div>
                     <Route path="/" exact component={AccountList} />
+                    <Route path="/transactions" component={TransactionList}/>
+
                 </div>
 
             </BrowserRouter>

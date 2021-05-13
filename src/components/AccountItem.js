@@ -13,11 +13,5 @@ const AccountItem = props => {
         </li>
     )
 };
-/*
-const mapStateToProps = (state) => {
-    return {
-        accounts: state.accounts
-    };
-};
-*/
+
 export default AccountItem;

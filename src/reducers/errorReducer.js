@@ -1,6 +1,7 @@
 
 const DEFAULT_STATE = {
-    getAccounts: ''
+    getAccounts: '',
+    getTransactions: ''
 };
 
 const errorReducer = (state = DEFAULT_STATE, action) => {
@@ -9,6 +10,11 @@ const errorReducer = (state = DEFAULT_STATE, action) => {
             return {
                 ...state,
                 getAccounts: 'Unable to get Accounts from API. Please Try again later'
+            };
+        case 'GET_TRANSACTION_ERROR':
+            return{
+                ...state,
+                getTransactions: 'Unable to get Transactions from API. Please Try again later'
             };
         default:
             return true;

@@ -6,13 +6,13 @@ import AccountItem from "./AccountItem";
 
 class AccountList extends React.Component{
     render() {
-        const taskItems = this.props.accounts.map(account => {
+        const accountItems = this.props.accounts.map(account => {
             return <AccountItem account={account} key={account._id} />
         });
 
         return (
             <ul className="task-list list-group">
-                { taskItems }
+                { accountItems }
             </ul>
         )
     }

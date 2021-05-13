@@ -24,8 +24,8 @@ class Navbar extends React.Component {
                     </Link>
                 </li>
                 <li className='nav-item'>
-                    <Link className={this.isActiveTab('/page2')} to="/page2"
-                          onClick={event => this.onTabClick(event, '/page2')}>
+                    <Link className={this.isActiveTab('/transactions')} to="/transactions"
+                          onClick={event => this.onTabClick(event, '/transactions')}>
                         Transaction History
                     </Link>
                 </li>
