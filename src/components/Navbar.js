@@ -16,20 +16,23 @@ class Navbar extends React.Component {
 
     render () {
         return (
-            <ul className='nav page-tabs'>
-                <li className='nav-item'>
-                    <Link className={this.isActiveTab('/')} to="/"
-                          onClick={event => this.onTabClick(event, '/')}>
-                        Accounts
-                    </Link>
-                </li>
-                <li className='nav-item'>
-                    <Link className={this.isActiveTab('/transactions')} to="/transactions"
-                          onClick={event => this.onTabClick(event, '/transactions')}>
-                        Transaction History
-                    </Link>
-                </li>
-            </ul>
+            <div className="navbar navbar-light bg-light rounded border-bottom">
+                <ul className='nav  page-tabs'>
+                    <li className='nav-item'>
+                        <Link className={this.isActiveTab('/')} to="/"
+                              onClick={event => this.onTabClick(event, '/')}>
+                            Accounts
+                        </Link>
+                    </li>
+                    <li className='nav-item'>
+                        <Link className={this.isActiveTab('/transactions')} to="/transactions"
+                              onClick={event => this.onTabClick(event, '/transactions')}>
+                            Transaction History
+                        </Link>
+                    </li>
+                </ul>
+            </div>
+
         )
     }
 

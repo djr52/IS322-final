@@ -2,6 +2,7 @@ import React from "react";
 import {connect} from "react-redux";
 
 import AccountItem from "./AccountItem";
+import AddTransaction from "./AddTransaction";
 
 
 class AccountPage extends React.Component{
@@ -18,32 +19,25 @@ class AccountPage extends React.Component{
                 console.log(account._id);
                 return <AccountItem account={account} key={account._id} />
             }
-
         });
         const accountTransactions = this.props.transactions.map(transaction =>{
-            let classes = 'list-group-item d-flex justify-content-between align-items-center';
+            let classes = 'list-group-item d-flex justify-content-between align-items-center shadow-sm p-3 mb-5 bg-white rounded';
             if(this.pageID == transaction.accountId){
                 return <li key={transaction._id} className={classes}>
                     <h5>{transaction.name} </h5>
                     <h5>{transaction.type} <span className="badge badge-info">${transaction.amount}</span></h5>
-
                 </li>
             }
-
         });
 
         return (
             <div>
-
                 {accountItem}
-
-                    <ul className="task-list list-group-flush">
+                    <ul className="task-list list-group-flush ">
                         {accountTransactions}
                     </ul>
-
+                <AddTransaction accountId={this.pageID}/>
                 <button className="btn btn-primary" onClick={this.goToHome}>Go To Home</button>
-
-
             </div>
         );
     }

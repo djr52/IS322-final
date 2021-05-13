@@ -12,7 +12,7 @@ const renderTransactionList = (allTransactions, accounts) =>{
                         {
                             (()=> {
                                 for(let i = 0; accounts.length; i++){
-                                    if(transaction.accountId === accounts[i]._id){
+                                    if(transaction.accountId == accounts[i]._id){
                                         return '"' + transaction.name + '"' + " - " + accounts[i].name;
                                     }
                                 }

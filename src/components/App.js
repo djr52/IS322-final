@@ -63,5 +63,3 @@ const mapStateToProps = (state) => {
 
 export default connect(mapStateToProps,{setAccounts, setTransactions, accountError})(App);
 
-//Really wish I couldve added more features to this project, but unfortunately other classes got in the way, looking at you IS375.
-// Planning to work on this over the summer for fun, wish me luck!
