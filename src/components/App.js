@@ -6,6 +6,7 @@ import Navbar from "./Navbar";
 
 import AccountList from "./AccountList"
 import TransactionList from "./TransactionList";
+import AccountPage from "./AccountPage";
 
 import '../styles/App.css';
 import axios from 'axios';
@@ -44,6 +45,7 @@ class App extends React.Component {
                 <div>
                     <Route path="/" exact component={AccountList} />
                     <Route path="/transactions" component={TransactionList}/>
+                    <Route path="/account/:id" component={AccountPage} />
 
                 </div>
 
@@ -60,3 +62,6 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps,{setAccounts, setTransactions, accountError})(App);
+
+//Really wish I couldve added more features to this project, but unfortunately other classes got in the way, looking at you IS375.
+// Planning to work on this over the summer for fun, wish me luck!
