@@ -16,7 +16,7 @@ class Navbar extends React.Component {
 
     render () {
         return (
-            <div className="navbar navbar-light bg-light rounded border-bottom">
+            <div className="navbar navbar-light bg-light rounded border-bottom shadow-sm p-3 mb-5 rounded">
                 <ul className='nav  page-tabs'>
                     <li className='nav-item'>
                         <Link className={this.isActiveTab('/')} to="/"

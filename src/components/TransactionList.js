@@ -28,6 +28,8 @@ const renderTransactionList = (allTransactions, accounts) =>{
 class TransactionList extends React.Component{
     render(){
         const transactionList = renderTransactionList(this.props.transactions, this.props.accounts);
+        console.log(this.props.transactions);
+
         return(
             <ul className="task-list list-group">
                 {transactionList}
